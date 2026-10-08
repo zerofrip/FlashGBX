@@ -148,8 +148,11 @@ for Windows, Linux, macOS (→ [Download](#downloads))
   - insideGadgets 32 MiB, 512K FLASH
   - insideGadgets 32 MiB, 4K/64K EEPROM
   - insideGadgets 32 MiB, 256K FRAM with Rumble option
+  - SuperChis Prime internal SuperFW firmware flash (EXPERIMENTAL, untested on real hardware)¹
 
 *¹ = Cannot always be auto-detected, select cartridge type manually*
+
+*The SuperChis Prime profile is for internal SuperFW firmware flash only; it is not for game ROMs or SRAM. It is untested on real hardware, must be selected manually (no auto-detection), and does not yet perform a flash ID check. Writing performs a full chip erase, which may also erase any NOR games stored on the cart. Only 2 MiB images containing the signature `SUPERFW~DAVIDGF` at offset 0xF0 are accepted. Power-cycle the cartridge after every operation, copy the `.txt` profile to the FlashGBX config directory manually, and note that the chip erase timeout is set to 2400 s.*
 
 </details>
 <details>
